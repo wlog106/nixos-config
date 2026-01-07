@@ -4,8 +4,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      nrs = "sudo nixos-rebuild switch --flake /etc/nixos#default";
-      ncg = "sudo nix-collect-grabage -d";
+      nrs = "sudo nixos-rebuild switch --flake /home/wlog/nixos-config#default";
+      ncg = "sudo nix-collect-garbage -d";
       ff = "fastfetch";
     };
 
