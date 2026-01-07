@@ -81,6 +81,7 @@
         User wlog
 	IdentityFile ~/.ssh/id_ed25519
     ";
+    enableAskPassword = false;
   };
 
   # Enable CUPS to print documents.
@@ -127,17 +128,10 @@
     mattermost
     mattermost-desktop
     discord
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-    alacritty
     fastfetch
-    vim
     lshw
-    git
     dconf
     dconf2nix
-    libgcc
-    gdb
-    gnumake
     nautilus
     gnomeExtensions.blur-my-shell   
   ];

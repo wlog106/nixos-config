@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ../../modules/home/browser.nix
+    ../../modules/home/shell.nix
+    ../../modules/home/terminal.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "wlog";
@@ -66,29 +72,6 @@
     # EDITOR = "emacs";
   };
 
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      nrs = "sudo nixos-rebuild switch --flake /etc/nixos#default";
-      ncg = "sudo nix-collect-grabage -d";
-      ff = "fastfetch";
-    }; 
-
-    initExtra = ''
-      export PS1='\[\e[38;5;221m\]\u\[\e[0m\] @ \[\e[38;5;75m\]\h\[\e[0m\] in \[\e[38;5;77m\]\w\n\[\e[0m\]-> \[\e[38;5;221m\]\\$\[\e[0m\] '
-    '';
-  };
-
-  programs.alacritty = {
-    enable = true;
-    settings = {
-      window.opacity = 0.9;
-      #font.normal = {
-	#family = "JetBrainsMono";
-	#style = "Regular";
-      #};
-    };
-  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
