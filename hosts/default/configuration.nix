@@ -8,6 +8,7 @@
     [ 
       ./hardware-configuration.nix
       ../../modules/system/timezone-locale.nix
+      ../../modules/system/input-method.nix
     ];
 
   # Bootloader.
@@ -27,14 +28,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   # Enable networking
   networking.networkmanager.enable = true;
-
-  i18n.inputMethod = {
-    enable = true;
-    type = "ibus";
-    ibus.engines = with pkgs.ibus-engines; [
-      chewing
-    ];
-  };
 
   # Enable the bluetooth
   hardware.bluetooth.enable = true;
@@ -65,9 +58,6 @@
     ";
     enableAskPassword = false;
   };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
