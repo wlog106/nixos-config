@@ -1,9 +1,7 @@
 { inputs, pkgs, ... }: 
 {
-
   home.packages = [
-    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.zen-browser.packages."x86_64-linux".twilight
   ];
-
-  programs.zen-browser.enable = true;
 }
+
