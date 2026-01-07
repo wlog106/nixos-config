@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/home/ssh.nix
     ../../modules/home/browser.nix
     ../../modules/home/shell.nix
     ../../modules/home/terminal.nix

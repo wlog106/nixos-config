@@ -2,6 +2,7 @@
 
 {
   programs.ssh = {
+    enable = true;
     extraConfig = "
       Host debian-in-thinkpad
         Hostname 140.113.89.250
