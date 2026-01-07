@@ -7,5 +7,6 @@
     gnumake
     libgcc
   ];
-
+  
+  programs.git.enable = true;
 }

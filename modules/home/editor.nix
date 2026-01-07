@@ -5,4 +5,5 @@
     pkgs.vim
   ];
 
+  programs.vim.enable = true;
 }

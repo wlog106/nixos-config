@@ -5,5 +5,5 @@
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
-
+  programs.zen-browser.enable = true;
 }
