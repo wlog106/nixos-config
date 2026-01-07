@@ -26,19 +26,10 @@
   # Enable the bluetooth
   hardware.bluetooth.enable = true;
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   # As of 25.11
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.wayland = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
 
   services.tailscale.enable = true;
 
