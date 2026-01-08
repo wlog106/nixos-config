@@ -11,11 +11,12 @@
       ../../modules/system/network.nix
       ../../modules/system/timezone-locale.nix
       ../../modules/system/users.nix
-      ../../modules/system/sound.nix
+      ../../modules/system/media.nix
       ../../modules/system/input-method.nix
       ../../modules/system/fonts.nix
       ../../modules/system/nvidia.nix
-      ../../modules/system/gnome.nix
+      ../../modules/system/hyprland.nix
+      #../../modules/system/gnome.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -26,7 +27,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # wallpaper location: /run/current-system/sw/share/backgrounds/nixos
-  environment.systemPackages = (with pkgs; [
+  environment.systemPackages = with pkgs; [
     qbittorrent
     tailscale
     mattermost
@@ -34,12 +35,8 @@
     discord
     fastfetch
     lshw
-    dconf
-    dconf2nix
     nautilus
-  ]) ++ (with pkgs.nixos-artwork.wallpapers; [
-    binary-black
-  ]);
+  ];
 
   services.mattermost = {
     enable = true;

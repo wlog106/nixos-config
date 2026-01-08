@@ -14,6 +14,7 @@
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.no-title-bar
   ];
 
   environment.gnome.excludePackages = with pkgs; [
