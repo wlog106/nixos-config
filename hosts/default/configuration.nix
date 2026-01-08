@@ -10,13 +10,12 @@
       ../../modules/system/boot.nix
       ../../modules/system/network.nix
       ../../modules/system/timezone-locale.nix
+      ../../modules/system/sound.nix
       ../../modules/system/input-method.nix
       ../../modules/system/nvidia.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  # Enable the bluetooth
-  hardware.bluetooth.enable = true;
 
   # As of 25.11
   services.displayManager.gdm.enable = true;
@@ -24,22 +23,6 @@
   services.displayManager.gdm.wayland = true;
 
   services.tailscale.enable = true;
-
-  # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
