@@ -10,6 +10,5 @@
         User wlog
         IdentityFile ~/.ssh/id_ed25519
     ";
-    enableAskPassword = false;
   };
 }
