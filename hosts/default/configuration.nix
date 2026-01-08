@@ -10,6 +10,7 @@
       ../../modules/system/boot.nix
       ../../modules/system/network.nix
       ../../modules/system/timezone-locale.nix
+      ../../modules/system/users.nix
       ../../modules/system/sound.nix
       ../../modules/system/input-method.nix
       ../../modules/system/nvidia.nix
@@ -19,14 +20,6 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   services.tailscale.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.wlog = {
-    isNormalUser = true;
-    description = "wlog";
-    extraGroups = [ "networkmanager" "wheel" ];
-  };
-
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
