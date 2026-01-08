@@ -13,6 +13,7 @@
       ../../modules/system/users.nix
       ../../modules/system/sound.nix
       ../../modules/system/input-method.nix
+      ../../modules/system/fonts.nix
       ../../modules/system/nvidia.nix
       ../../modules/system/gnome.nix
     ];
@@ -37,14 +38,6 @@
     dconf
     dconf2nix
     nautilus
-  ];
-
-  fonts.packages = with pkgs; [
-    noto-fonts
-    noto-fonts-cjk-sans
-    noto-fonts-cjk-serif
-    nerd-fonts.fira-mono
-    nerd-fonts.jetbrains-mono
   ];
 
   services.mattermost = {
