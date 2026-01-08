@@ -25,9 +25,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  # wallpaper location: /run/current-system/sw/share/backgrounds/nixos
+  environment.systemPackages = (with pkgs; [
     qbittorrent
     tailscale
     mattermost
@@ -38,7 +37,9 @@
     dconf
     dconf2nix
     nautilus
-  ];
+  ]) ++ (with pkgs.nixos-artwork.wallpapers; [
+    binary-black
+  ]);
 
   services.mattermost = {
     enable = true;
