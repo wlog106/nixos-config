@@ -8,6 +8,7 @@
     ../../modules/home/terminal.nix
     ../../modules/home/dev-tool.nix
     ../../modules/home/editor.nix
+    ../../modules/home/hyprdot.nix
     ../../modules/home/gtk-theme.nix
   ];
 

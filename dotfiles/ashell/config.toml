@@ -1,0 +1,28 @@
+
+position = "Top"
+
+[appearance]
+style = "Gradient"
+
+# the activated function background color
+primary_color = "#F0F0E0"
+success_color = "#9ece6a"
+text_color = "#F0F0E0"
+
+workspace_colors = [ "#F0F0E0", "#000000" ]
+
+[appearance.danger_color]
+base = "#f7768e"
+weak = "#e0af68"
+
+[appearance.background_color]
+base = "#000000"
+# the background color when you don't hover over the buttom
+weak = "#24273a"
+# like weak but when hover
+strong = "#414868"
+
+[appearance.secondary_color]
+# the color of the volume bar background
+base = "#0c0d14"
+
