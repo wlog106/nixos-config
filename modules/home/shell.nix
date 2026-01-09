@@ -5,7 +5,7 @@
     enable = true;
 
     shellAliases = {
-      cc-test = "sudo openfortivpn -c ~/cc-vpn.conf --realm test";
+      cc-vpn-test = "sudo openfortivpn -c ~/cc-vpn.conf --realm test";
       nrs = "sudo nixos-rebuild switch --flake /home/wlog/nixos-config#default";
       ncg = "sudo nix-collect-garbage -d";
       ff = "fastfetch";
