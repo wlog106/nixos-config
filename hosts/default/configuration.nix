@@ -26,8 +26,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # wallpaper location: /run/current-system/sw/share/backgrounds/nixos
   environment.systemPackages = with pkgs; [
+    starship
     qbittorrent
     tailscale
     mattermost

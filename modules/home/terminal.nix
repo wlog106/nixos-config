@@ -4,7 +4,13 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      window.opacity = 0.8;
+      window = {
+        opacity = 0.8;
+	padding = {
+	  x = 12;
+	  y = 12;
+	}; 
+      };
       font = {
       	size = 12.0; 
       	normal = {
