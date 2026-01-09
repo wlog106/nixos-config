@@ -43,5 +43,7 @@
     siteUrl = "https://mattermost.it.cs.nycu.edu.tw";
   };
 
+  programs.dconf.enable = true;
+
   system.stateVersion = "25.11"; 
 }
