@@ -35,7 +35,6 @@
     discord
     fastfetch
     lshw
-    nautilus
   ];
 
   services.mattermost = {

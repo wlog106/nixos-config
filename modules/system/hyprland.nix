@@ -10,11 +10,11 @@
   
   environment.systemPackages = with pkgs; [
     rofi
+    thunar
     nwg-look
     ashell
     hyprpaper
     hyprlock
     hypridle
   ];
-
 }
