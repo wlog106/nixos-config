@@ -27,6 +27,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    openfortivpn
     starship
     qbittorrent
     tailscale
