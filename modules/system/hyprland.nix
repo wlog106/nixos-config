@@ -10,6 +10,7 @@
   
   environment.systemPackages = with pkgs; [
     rofi
+    nwg-look
     ashell
     hyprpaper
     hyprlock

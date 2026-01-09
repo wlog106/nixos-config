@@ -8,6 +8,7 @@
     ../../modules/home/terminal.nix
     ../../modules/home/dev-tool.nix
     ../../modules/home/editor.nix
+    ../../modules/home/gtk-theme.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

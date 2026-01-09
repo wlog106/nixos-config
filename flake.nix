@@ -28,6 +28,8 @@
 	      extraSpecialArgs = { inherit inputs; };
 	      useGlobalPkgs = true;
 	      useUserPackages = true;
+	      backupFileExtension = "bak";
+	      overwriteBackup = true;
 	      users.wlog = ./hosts/default/home.nix;
 	    };
 	  }
