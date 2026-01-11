@@ -1,0 +1,47 @@
+{ pkgs, inputs, ... }:
+
+{
+  imports = [ inputs.nixvim.homeModules.nixvim ];
+
+  home.packages = [ pkgs.vim ];
+
+  programs.nixvim = {
+    enable = true;
+    defaultEditor = true;
+
+    globals.mapleader = " ";
+
+    opts = {
+      clipboard = "unnamedplus";
+
+      # tab settings
+      tabstop = 4;
+      shiftwidth = 4;
+      softtabstop = 4;
+      expandtab = true;
+      shiftround = true;
+      smartindent = true;
+
+      # line number settings
+      number = true;
+      relativenumber = true;
+      wrap = false;
+      cursorline = true;
+
+      # search settings
+      incsearch = true;
+      hlsearch = true;
+    };
+
+    keymaps = [
+        {
+            mode = "n";
+            key = "<Esc>";
+            action = ":nohlsearch<CR>";
+            options = { silent = true; };
+        }
+    ];
+
+  };
+
+}

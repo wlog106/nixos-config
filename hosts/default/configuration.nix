@@ -27,6 +27,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    efibootmgr
     openfortivpn
     starship
     qbittorrent

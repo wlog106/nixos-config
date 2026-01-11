@@ -2,5 +2,8 @@
 
 {
   home.packages = [ pkgs.vim ];
-  #programs.vim.enable = true;
+
+  programs.helix = {
+    enable = true;
+  };
 }
